@@ -7,6 +7,10 @@ const Meal=()=>{
     const[item,setItem]=useState();
     const[show,setShow]=useState(false);
     const [search,setSearch]=useState("")
-}
-
-export default Meal
+    useEffect(()=>{
+        fetch(url).then(res=>res.json()).then(data=>{
+            console.log(data.meals);
+            setItem(data.meals);
+            setShow(true);
+        })
+    },[url])
