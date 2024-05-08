@@ -23,3 +23,9 @@ const Meal=()=>{
             setUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
         }
     }
+    return(
+        <>
+        <div className="main">
+             <div className="heading">
+                  <h1>GROUP UNO FOOD COURT</h1>
+             </div>
