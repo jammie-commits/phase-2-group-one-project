@@ -1,9 +1,26 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+const MealItem =((data) =>{
+    console.log(data)
+});
+let navigate =useNavigate();
 
 function MealItem() {
   return (
-    <div>MealItem</div>
+    <>
+    {
+        ( !data ) ? "Not Found" :data.map(item =>{
+            return(
+                <div className="card" key={item.idMeal} onClick={()=>{navigate(`/${item.idMeal}`)}}>
+                <img src={item.strMealThumb} alt=""/>
+                <h3>{item.strMeal}</h3>
+                </div>
+            )
+
+        })
+    }
+    </>
   )
 }
 
-export default MealItem
+export default MealItem;
