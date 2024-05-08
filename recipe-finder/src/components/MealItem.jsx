@@ -7,7 +7,13 @@ let navigate =useNavigate();
 
 function MealItem() {
   return (
-    <div>MealItem</div>
+    <>
+    {
+        (!data)?"Not Found" :data.map(item =>{
+            
+        })
+    }
+    </>
   )
 }
 
