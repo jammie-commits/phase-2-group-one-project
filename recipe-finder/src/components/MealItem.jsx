@@ -9,12 +9,12 @@ function MealItem() {
   return (
     <>
     {
-        (!data)?"Not Found" :data.map(item =>{
+        ( !data ) ? "Not Found" :data.map(item =>{
             return(
                 <div className="card" key={item.idMeal} onClick={()=>{navigate(`/${item.idMeal}`)}}>
-                  <img src={item.strMealThumb} alt=""/>
-                  <h3>{item.strMeal}</h3>
-                  </div>
+                <img src={item.strMealThumb} alt=""/>
+                <h3>{item.strMeal}</h3>
+                </div>
             )
 
         })
@@ -23,4 +23,4 @@ function MealItem() {
   )
 }
 
-export default MealItem
+export default MealItem;
