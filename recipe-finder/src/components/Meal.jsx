@@ -29,3 +29,19 @@ const Meal=()=>{
              <div className="heading">
                   <h1>GROUP UNO FOOD COURT</h1>
              </div>
+             <div className="searchBox">
+            <input type="search" className="search-bar" onChange={e => setSearch(e.target.value)} onKeyPress={searchRecipe}/>
+           </div>
+           <div className="container">
+                  {
+                    show ? <MealItem data= {item}/>:"Not Found"
+                  }   
+           </div>
+           <div className="indexContainer">
+                   <RecipeIndex alphaIndex={(alpha)=>setIndex(alpha)}/>
+           </div>
+      </div>
+      </>
+    )
+};
+export default Meal;
