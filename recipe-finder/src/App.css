@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap');
+@import url('https://www.1001fonts.com/cookie-font.html');
 *{
    padding: 0;
    margin:0;
    font-family: 'Bona Nova', serif;
 }
-body{
-  background-color: #ecea42;
+body {
+  
+  background-image: url("https://img.freepik.com/free-photo/burger-french-fries-plate-with-copy-space_23-2148235009.jpg?t=st=1715243427~exp=1715247027~hmac=7854b92246ce3c7f8cb3757e95cc29703148d03e7a7f3fb2c27b409bab99554a&w=996");  /* Replace with your image path */
+  background-repeat: no-repeat;  
+  background-position: center;  
+  background-size: cover;     
 }
 .main{
   width:80%;
