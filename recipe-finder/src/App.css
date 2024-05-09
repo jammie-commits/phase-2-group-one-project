@@ -7,9 +7,9 @@
 }
 body {
   
-  background-image: url("https://img.freepik.com/free-photo/burger-french-fries-plate-with-copy-space_23-2148235009.jpg?t=st=1715243427~exp=1715247027~hmac=7854b92246ce3c7f8cb3757e95cc29703148d03e7a7f3fb2c27b409bab99554a&w=996");  /* Replace with your image path */
+  background-image: url("https://img.freepik.com/free-photo/top-view-delicious-food-table_23-2150857986.jpg?t=st=1715248514~exp=1715252114~hmac=a9e73c10d022c080c963599a21769949f38dc87742efde966a53aab0e0bb33e2&w=1380");  
   background-repeat: no-repeat;  
-  background-position: center;  
+  background-position: absolute;  
   background-size: cover;     
 }
 .main{
@@ -18,7 +18,7 @@ body {
   text-align: center;
 }
 .heading h1{
-  color: #030e12;
+  color: white;
   font-size: 48px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -41,34 +41,53 @@ body {
   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
   grid-gap: 2rem;
 }
-.card{
+.card {
   width: 180px;
   border-radius: 1rem;
-  background-color: #030e12;
+  background-color: #4e8534;
+  background-blend-mode: hue;
+  background-color: goldenrod;
+
   padding: 5px;
+}
+.card:hover {
+  box-shadow: 0 0 50px 0px rgba(61, 199, 34, 0.823);
+
 }
 img{
   width: 100%;
   border-radius: 1rem 1rem 0 0;
 }
 .card h3{
-  color:white;
+  color:rgb(65, 119, 115);
   font-size: 18px;
 }
 .indexContainer{
   display:flex;
   margin: 2.5rem 0;
 }
-.numBox{
+.numBox {
   width: 50px;
   height: 40px;
-  background-color: #030e12;
+  background-color: goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  margin:0 5px 0 5px;
+  margin: 0 5px 0 5px;
   border-radius: 100px;
+  
+}
+
+@keyframes wave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.numBox:hover {
+  box-shadow: 0 0 50px 0px rgba(61, 199, 34, 0.823);
+  animation: wave 0.8s;
 }
 .content img{
   width: 100%;
@@ -88,16 +107,24 @@ img{
 }
 .recipe-details{
   width: 70%;
-  width: 2rem auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-left: 0%;
 }
 .ingredients, .instructions{
-  flex-basis: 50%;
-  text-align: justify;
+  position: absolute;
+  text-align: center;
+  color: white;
 }
 .ingredients h4{
 margin-top: 1.5rem;
 font-weight: bold;
+}
+.ingredients {
+  margin-top: 250px;
+  margin-left: 625px;
+  background-color: antiquewhite;
+  
+  text-align: center;
+  color: rgb(11, 11, 11);
 }

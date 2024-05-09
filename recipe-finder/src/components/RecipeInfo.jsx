@@ -24,7 +24,12 @@ const RecipeInfo=()=> {
                   <h3>Category{item.strCategory}</h3>
              </div>
          </div>
-        <div className="recipe-details">
+        
+             <div className="instructions">
+                  <h2>Instructions</h2><br/>
+                  <h4>{item.strInstructions}</h4>
+             </div>
+             <div className="recipe-details">
              <div className="ingredients">
               <h2>Ingredients</h2><br/>
                 
@@ -41,10 +46,6 @@ const RecipeInfo=()=> {
                return null;
               })}
 
-             </div>
-             <div className="instructions">
-                  <h2>Instructions</h2><br/>
-                  <h4>{item.strInstructions}</h4>
              </div>
         </div>
         </>)
