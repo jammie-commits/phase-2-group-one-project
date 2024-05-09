@@ -27,7 +27,7 @@ const Meal=()=>{
         <>
         <div className="main">
              <div className="heading">
-                  <h1>GROUP UNO FOOD COURT</h1>
+                  <h1>FOOD COURT</h1>
              </div>
              <div className="searchBox">
             <input type="search" className="search-bar" onChange={e => setSearch(e.target.value)} onKeyPress={searchRecipe}/>
