@@ -7,10 +7,8 @@ const About = () => {
             <p>
                 This is a recipe search application that allows you to explore a vast database of recipes and filter them by the first letter of the name or search for specific recipes.
             </p>
-            <p>
-                Data is fetched from [TheMealDB](https://www.themealdb.com/).
-            </p>
-        </div>
+            </div>
+            
     );
 };
 
