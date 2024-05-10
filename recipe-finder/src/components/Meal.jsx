@@ -1,6 +1,7 @@
 import React, { useState , useEffect} from "react";
 import MealItem from "./MealItem";
 import RecipeIndex from "./RecipeIndex";
+// import About from "./About";
 
 const Meal=()=>{
     const[url,setUrl]=useState("https:/www.themealdb.com/api/json/v1/1/search.php?f=a");
@@ -39,6 +40,7 @@ const Meal=()=>{
            </div>
            <div className="indexContainer">
                    <RecipeIndex alphaIndex={(alpha)=>setIndex(alpha)}/>
+                   {/* <About/> */}
            </div>
       </div>
       </>
