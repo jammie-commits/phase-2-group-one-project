@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# FOOD-COURT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Date 8th May 2024
 
-## Available Scripts
+## Process
+Imports:
 
-In the project directory, you can run:
+    React: The main library for building user interfaces.
+    useState and useEffect: Functions from React to manage component state and side effects.
+    MealItem and RecipeIndex: Likely custom components used to display recipe items and a recipe index respectively.
 
-### `npm start`
+Meal Component:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    State Variables:
+        url: Stores the API endpoint URL for fetching recipes.
+        item: Stores the fetched recipe data as an array.
+        show: Controls whether to display the recipe items or a "Not Found" message.
+        search: Stores the user's search term.
+    useEffect Hook:
+        Fetches data from the initial URL (https:/www.themealdb.com/api/json/v1/1/search.php?f=a) which retrieves recipes starting with the letter "a".
+        Parses the JSON response and stores the recipes in the item state.
+        Sets the show state to true to display the recipes.
+    setIndex Function:
+        Updates the url state based on the provided alphabet letter (alpha).
+        This triggers a re-render and refetches recipes starting with the chosen letter.
+    searchRecipe Function:
+        Handles the "Enter" key press event on the search bar.
+        Updates the url state to include the search term (search) for recipe name search.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Return Section:
 
-### `npm test`
+    Renders the JSX code for the meal application layout:
+        Main container with sections for heading, search box, recipe container, and recipe index.
+        The MealItem component is conditionally rendered based on the show state, passing the fetched recipe data as props.
+        The RecipeIndex component likely displays an index for filtering recipes by alphabet and might call the setIndex function when a letter is clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Technologies used
+React
+Javascript
+Css
+Html
